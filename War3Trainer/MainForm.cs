@@ -12,7 +12,6 @@ namespace War3Trainer
         public MainForm()
         {
             InitializeComponent();
-            SetRightGrid(RightFunction.Introduction);
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -172,22 +171,8 @@ namespace War3Trainer
             if (node == null)
                 return;
 
-            // Show introduction page
-            if (node.NodeType == TrainerNodeType.Introduction)
-            {
-                SetRightGrid(RightFunction.Introduction);
-            }
-            else
-            {
-                // Fill address list
-                FillAddressList(node.NodeIndex);
+            FillAddressList(node.NodeIndex);
 
-                // Show address list
-                if (viewData.Items.Count > 0)
-                    SetRightGrid(RightFunction.EditTable);
-                else
-                    SetRightGrid(RightFunction.Empty);
-            }
         }
 
         private void FillAddressList(int functionNodeId)
@@ -421,20 +406,6 @@ namespace War3Trainer
             Empty,
             Introduction,
             EditTable,
-        }
-
-        private void SetRightGrid(RightFunction function)
-        {
-            this.splitMain.Panel2.SuspendLayout();
-            this.viewData.SuspendLayout();
-
-            viewData.Visible = function == RightFunction.EditTable;
-
-            viewData.Dock = DockStyle.Fill;
-
-            this.viewData.ResumeLayout(false);
-            this.splitMain.Panel2.ResumeLayout(false);
-            this.splitMain.Panel2.PerformLayout();
         }
 
         //////////////////////////////////////////////////////////////////////////       
