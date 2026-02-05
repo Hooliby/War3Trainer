@@ -45,13 +45,13 @@
             this.viewFunctions = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitMain = new System.Windows.Forms.SplitContainer();
+            this.cmdGetAllObjects = new System.Windows.Forms.Button();
+            this.cmdModify = new System.Windows.Forms.Button();
             this.viewData = new War3Trainer.ListViewEx();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colOriginalValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colUnsavedValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtInput = new System.Windows.Forms.TextBox();
-            this.cmdGetAllObjects = new System.Windows.Forms.Button();
-            this.cmdModify = new System.Windows.Forms.Button();
             this.toolContainer.ContentPanel.SuspendLayout();
             this.toolContainer.TopToolStripPanel.SuspendLayout();
             this.toolContainer.SuspendLayout();
@@ -70,11 +70,11 @@
             // toolContainer.ContentPanel
             // 
             this.toolContainer.ContentPanel.Controls.Add(this.toolStripMain);
-            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(699, 26);
+            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(697, 26);
             this.toolContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolContainer.Location = new System.Drawing.Point(0, 0);
             this.toolContainer.Name = "toolContainer";
-            this.toolContainer.Size = new System.Drawing.Size(699, 51);
+            this.toolContainer.Size = new System.Drawing.Size(697, 51);
             this.toolContainer.TabIndex = 0;
             this.toolContainer.Text = "toolStripContainer1";
             // 
@@ -91,7 +91,7 @@
             this.toolStripMain.Location = new System.Drawing.Point(0, 0);
             this.toolStripMain.Name = "toolStripMain";
             this.toolStripMain.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            this.toolStripMain.Size = new System.Drawing.Size(699, 28);
+            this.toolStripMain.Size = new System.Drawing.Size(697, 28);
             this.toolStripMain.TabIndex = 1;
             this.toolStripMain.Text = "toolStrip1";
             // 
@@ -124,7 +124,7 @@
             this.menuHelp});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(699, 25);
+            this.menuMain.Size = new System.Drawing.Size(697, 25);
             this.menuMain.TabIndex = 2;
             this.menuMain.Text = "menuStrip1";
             // 
@@ -211,6 +211,33 @@
             this.splitMain.SplitterWidth = 6;
             this.splitMain.TabIndex = 7;
             // 
+            // cmdGetAllObjects
+            // 
+            this.cmdGetAllObjects.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmdGetAllObjects.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmdGetAllObjects.Location = new System.Drawing.Point(7, 519);
+            this.cmdGetAllObjects.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+            this.cmdGetAllObjects.Name = "cmdGetAllObjects";
+            this.cmdGetAllObjects.Size = new System.Drawing.Size(251, 33);
+            this.cmdGetAllObjects.TabIndex = 12;
+            this.cmdGetAllObjects.Text = "刷新";
+            this.cmdGetAllObjects.UseVisualStyleBackColor = true;
+            this.cmdGetAllObjects.Click += new System.EventHandler(this.cmdGetAllObjects_Click);
+            // 
+            // cmdModify
+            // 
+            this.cmdModify.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmdModify.AutoSize = true;
+            this.cmdModify.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmdModify.Location = new System.Drawing.Point(264, 519);
+            this.cmdModify.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+            this.cmdModify.Name = "cmdModify";
+            this.cmdModify.Size = new System.Drawing.Size(428, 33);
+            this.cmdModify.TabIndex = 13;
+            this.cmdModify.Text = "修改";
+            this.cmdModify.UseVisualStyleBackColor = true;
+            this.cmdModify.Click += new System.EventHandler(this.cmdModify_Click);
+            // 
             // viewData
             // 
             this.viewData.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -223,7 +250,7 @@
             this.viewData.FullRowSelect = true;
             this.viewData.GridLines = true;
             this.viewData.HideSelection = false;
-            this.viewData.Location = new System.Drawing.Point(1, 3);
+            this.viewData.Location = new System.Drawing.Point(3, 3);
             this.viewData.MultiSelect = false;
             this.viewData.Name = "viewData";
             this.viewData.Size = new System.Drawing.Size(421, 451);
@@ -265,39 +292,12 @@
             this.txtInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInput_KeyDown);
             this.txtInput.Leave += new System.EventHandler(this.txtInput_Leave);
             // 
-            // cmdGetAllObjects
-            // 
-            this.cmdGetAllObjects.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdGetAllObjects.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmdGetAllObjects.Location = new System.Drawing.Point(8, 519);
-            this.cmdGetAllObjects.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
-            this.cmdGetAllObjects.Name = "cmdGetAllObjects";
-            this.cmdGetAllObjects.Size = new System.Drawing.Size(251, 33);
-            this.cmdGetAllObjects.TabIndex = 12;
-            this.cmdGetAllObjects.Text = "刷新";
-            this.cmdGetAllObjects.UseVisualStyleBackColor = true;
-            this.cmdGetAllObjects.Click += new System.EventHandler(this.cmdGetAllObjects_Click);
-            // 
-            // cmdModify
-            // 
-            this.cmdModify.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdModify.AutoSize = true;
-            this.cmdModify.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmdModify.Location = new System.Drawing.Point(265, 519);
-            this.cmdModify.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
-            this.cmdModify.Name = "cmdModify";
-            this.cmdModify.Size = new System.Drawing.Size(428, 33);
-            this.cmdModify.TabIndex = 13;
-            this.cmdModify.Text = "修改";
-            this.cmdModify.UseVisualStyleBackColor = true;
-            this.cmdModify.Click += new System.EventHandler(this.cmdModify_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(699, 564);
+            this.ClientSize = new System.Drawing.Size(697, 564);
             this.Controls.Add(this.cmdGetAllObjects);
             this.Controls.Add(this.cmdModify);
             this.Controls.Add(this.splitMain);
