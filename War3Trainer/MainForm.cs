@@ -107,7 +107,8 @@ namespace War3Trainer
             viewFunctions.Nodes.Clear();
             foreach (ITrainerNode currentFunction in _mainTrainer.GetFunctionList())
             {
-                if (currentFunction.NodeType == TrainerNodeType.Introduction) { continue; }
+                if (currentFunction.NodeType == TrainerNodeType.Introduction)
+                    continue;
 
                 TreeNode[] parentNodes = viewFunctions.Nodes.Find(currentFunction.ParentIndex.ToString(), true);
                 TreeNodeCollection parentTree;
@@ -222,6 +223,7 @@ namespace War3Trainer
                             break;
                     }
                     currentItem.SubItems[1].Text = itemValue.ToString();
+                    currentItem.ImageIndex = 2;
                 }
             }
         }
@@ -295,7 +297,7 @@ namespace War3Trainer
 
         private void ReportVersionFailure(int processId, string version)
         {
-            labGameScanState.Text = "检测到游戏，但版本（"
+            labGameScanState.Text = "游戏已运行，但版本（"
                 + version
                 + "）不被支持";
         }
