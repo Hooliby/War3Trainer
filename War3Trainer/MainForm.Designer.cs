@@ -70,11 +70,11 @@
             // toolContainer.ContentPanel
             // 
             this.toolContainer.ContentPanel.Controls.Add(this.toolStripMain);
-            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(622, 26);
+            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(678, 26);
             this.toolContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolContainer.Location = new System.Drawing.Point(0, 0);
             this.toolContainer.Name = "toolContainer";
-            this.toolContainer.Size = new System.Drawing.Size(622, 51);
+            this.toolContainer.Size = new System.Drawing.Size(678, 51);
             this.toolContainer.TabIndex = 0;
             this.toolContainer.Text = "toolStripContainer1";
             // 
@@ -91,7 +91,7 @@
             this.toolStripMain.Location = new System.Drawing.Point(0, 0);
             this.toolStripMain.Name = "toolStripMain";
             this.toolStripMain.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            this.toolStripMain.Size = new System.Drawing.Size(622, 28);
+            this.toolStripMain.Size = new System.Drawing.Size(678, 28);
             this.toolStripMain.TabIndex = 1;
             this.toolStripMain.Text = "toolStrip1";
             // 
@@ -124,7 +124,7 @@
             this.menuHelp});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(622, 25);
+            this.menuMain.Size = new System.Drawing.Size(678, 25);
             this.menuMain.TabIndex = 2;
             this.menuMain.Text = "menuStrip1";
             // 
@@ -182,14 +182,14 @@
             this.viewFunctions.Location = new System.Drawing.Point(0, 0);
             this.viewFunctions.Name = "viewFunctions";
             this.viewFunctions.SelectedImageIndex = 0;
-            this.viewFunctions.Size = new System.Drawing.Size(222, 434);
+            this.viewFunctions.Size = new System.Drawing.Size(243, 454);
             this.viewFunctions.TabIndex = 3;
             this.viewFunctions.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.viewFunctions_BeforeSelect);
             // 
             // cmdGetAllObjects
             // 
             this.cmdGetAllObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdGetAllObjects.Location = new System.Drawing.Point(454, 504);
+            this.cmdGetAllObjects.Location = new System.Drawing.Point(510, 524);
             this.cmdGetAllObjects.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdGetAllObjects.Name = "cmdGetAllObjects";
             this.cmdGetAllObjects.Size = new System.Drawing.Size(75, 23);
@@ -201,7 +201,7 @@
             // cmdModify
             // 
             this.cmdModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdModify.Location = new System.Drawing.Point(535, 504);
+            this.cmdModify.Location = new System.Drawing.Point(591, 524);
             this.cmdModify.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdModify.Name = "cmdModify";
             this.cmdModify.Size = new System.Drawing.Size(75, 23);
@@ -225,8 +225,8 @@
             // splitMain.Panel2
             // 
             this.splitMain.Panel2.Controls.Add(this.viewData);
-            this.splitMain.Size = new System.Drawing.Size(602, 434);
-            this.splitMain.SplitterDistance = 222;
+            this.splitMain.Size = new System.Drawing.Size(658, 454);
+            this.splitMain.SplitterDistance = 243;
             this.splitMain.SplitterWidth = 6;
             this.splitMain.TabIndex = 7;
             // 
@@ -294,7 +294,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(622, 539);
+            this.ClientSize = new System.Drawing.Size(678, 559);
             this.Controls.Add(this.splitMain);
             this.Controls.Add(this.cmdModify);
             this.Controls.Add(this.cmdGetAllObjects);

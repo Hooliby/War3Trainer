@@ -131,8 +131,26 @@ namespace War3Trainer
                 viewFunctions.SelectedNode = introductionNodes[0];
                 SelectFunction(introductionNodes[0]);
             }
+            UpdateNodeIcons(viewFunctions.Nodes);
         }
+        private void UpdateNodeIcons(TreeNodeCollection nodes)
+        {
+            foreach (TreeNode node in nodes)
+            {
+                if (node.Nodes.Count > 0)
+                {
+                    node.ImageIndex = 0;
+                    node.SelectedImageIndex = 0;
+                    UpdateNodeIcons(node.Nodes);
+                }
+                else
+                {
+                    node.ImageIndex = 1;
+                    node.SelectedImageIndex = 1;
 
+                }
+            }
+        }
         // Re-query specific tree-node by FunctionListNode
         private void RefreshSelectedObject(ITrainerNode currentFunction)
         {
