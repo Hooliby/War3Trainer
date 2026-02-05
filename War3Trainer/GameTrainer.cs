@@ -312,7 +312,7 @@ namespace War3Trainer
         : TrainerNode, ITrainerNode
     {
         public TrainerNodeType NodeType { get { return TrainerNodeType.Root; } }
-        public string NodeTypeName { get { return "所有功能"; } }
+        public string NodeTypeName { get { return "功能选区"; } }
 
         public int NodeIndex { get { return _nodeIndex; } }
         public int ParentIndex { get { return _parentIndex; } }
@@ -393,21 +393,21 @@ namespace War3Trainer
             for (int i = 1; i <= 12; i++)
             {
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "P" + i.ToString() + " - 金",
+                    "玩家" + i.ToString() + " - 金币",
                     unchecked(upperAddress + playerSourceBaseAddress[i] + 0),
                     AddressListValueType.Integer,
                     10));
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "P" + i.ToString() + " - 木",
+                    "玩家" + i.ToString() + " - 木头",
                     unchecked(upperAddress + playerSourceBaseAddress[i] + 0x80),
                     AddressListValueType.Integer,
                     10));
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "P" + i.ToString() + " - 最大人口",
+                    "玩家" + i.ToString() + " - 最大人口",
                     unchecked(upperAddress + playerSourceBaseAddress[i] + 0x180),
                     AddressListValueType.Integer));
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "P" + i.ToString() + " - 当前人口",
+                    "玩家" + i.ToString() + " - 当前人口",
                     unchecked(upperAddress + playerSourceBaseAddress[i] + 0x200),
                     AddressListValueType.Integer));
             }
@@ -553,11 +553,11 @@ namespace War3Trainer
                     AddressListValueType.Float));
                 
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "盔甲 - 数量",
+                    "护甲 - 数量",
                     unchecked(_newChildrenArgs.ThisUnitAddress + 0xE0),
                     AddressListValueType.Float));
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "盔甲 - 种类",
+                    "护甲 - 种类",
                     unchecked(_newChildrenArgs.ThisUnitAddress + 0xE4),
                     AddressListValueType.Integer));
                 

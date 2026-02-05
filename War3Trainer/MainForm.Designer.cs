@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolContainer = new System.Windows.Forms.ToolStripContainer();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
-            this.labGameScanState = new System.Windows.Forms.ToolStripLabel();
             this.cmdScanGame = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.labGameScanState = new System.Windows.Forms.ToolStripLabel();
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDebug1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,7 @@
             this.colOriginalValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colUnsavedValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtInput = new System.Windows.Forms.TextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolContainer.ContentPanel.SuspendLayout();
             this.toolContainer.TopToolStripPanel.SuspendLayout();
             this.toolContainer.SuspendLayout();
@@ -70,11 +72,11 @@
             // toolContainer.ContentPanel
             // 
             this.toolContainer.ContentPanel.Controls.Add(this.toolStripMain);
-            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(535, 26);
+            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(622, 26);
             this.toolContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolContainer.Location = new System.Drawing.Point(0, 0);
             this.toolContainer.Name = "toolContainer";
-            this.toolContainer.Size = new System.Drawing.Size(535, 51);
+            this.toolContainer.Size = new System.Drawing.Size(622, 51);
             this.toolContainer.TabIndex = 0;
             this.toolContainer.Text = "toolStripContainer1";
             // 
@@ -85,38 +87,35 @@
             // toolStripMain
             // 
             this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.labGameScanState,
             this.cmdScanGame,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.labGameScanState});
             this.toolStripMain.Location = new System.Drawing.Point(0, 0);
             this.toolStripMain.Name = "toolStripMain";
             this.toolStripMain.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            this.toolStripMain.Size = new System.Drawing.Size(535, 28);
+            this.toolStripMain.Size = new System.Drawing.Size(622, 28);
             this.toolStripMain.TabIndex = 1;
             this.toolStripMain.Text = "toolStrip1";
+            // 
+            // cmdScanGame
+            // 
+            this.cmdScanGame.Image = ((System.Drawing.Image)(resources.GetObject("cmdScanGame.Image")));
+            this.cmdScanGame.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdScanGame.Name = "cmdScanGame";
+            this.cmdScanGame.Size = new System.Drawing.Size(76, 21);
+            this.cmdScanGame.Text = "查找游戏";
+            this.cmdScanGame.Click += new System.EventHandler(this.cmdScanGame_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 24);
             // 
             // labGameScanState
             // 
             this.labGameScanState.Name = "labGameScanState";
             this.labGameScanState.Size = new System.Drawing.Size(68, 21);
             this.labGameScanState.Text = "游戏未运行";
-            // 
-            // cmdScanGame
-            // 
-            this.cmdScanGame.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.cmdScanGame.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.cmdScanGame.Image = ((System.Drawing.Image)(resources.GetObject("cmdScanGame.Image")));
-            this.cmdScanGame.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cmdScanGame.Name = "cmdScanGame";
-            this.cmdScanGame.Size = new System.Drawing.Size(60, 21);
-            this.cmdScanGame.Text = "查找游戏";
-            this.cmdScanGame.Click += new System.EventHandler(this.cmdScanGame_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 24);
             // 
             // menuMain
             // 
@@ -127,7 +126,7 @@
             this.menuHelp});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(535, 25);
+            this.menuMain.Size = new System.Drawing.Size(622, 25);
             this.menuMain.TabIndex = 2;
             this.menuMain.Text = "menuStrip1";
             // 
@@ -178,17 +177,21 @@
             // viewFunctions
             // 
             this.viewFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewFunctions.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.viewFunctions.HideSelection = false;
+            this.viewFunctions.ImageIndex = 0;
+            this.viewFunctions.ImageList = this.imageList1;
             this.viewFunctions.Location = new System.Drawing.Point(0, 0);
             this.viewFunctions.Name = "viewFunctions";
-            this.viewFunctions.Size = new System.Drawing.Size(191, 341);
+            this.viewFunctions.SelectedImageIndex = 0;
+            this.viewFunctions.Size = new System.Drawing.Size(222, 434);
             this.viewFunctions.TabIndex = 3;
             this.viewFunctions.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.viewFunctions_BeforeSelect);
             // 
             // cmdGetAllObjects
             // 
             this.cmdGetAllObjects.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdGetAllObjects.Location = new System.Drawing.Point(367, 411);
+            this.cmdGetAllObjects.Location = new System.Drawing.Point(454, 504);
             this.cmdGetAllObjects.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdGetAllObjects.Name = "cmdGetAllObjects";
             this.cmdGetAllObjects.Size = new System.Drawing.Size(75, 23);
@@ -200,7 +203,7 @@
             // cmdModify
             // 
             this.cmdModify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdModify.Location = new System.Drawing.Point(448, 411);
+            this.cmdModify.Location = new System.Drawing.Point(535, 504);
             this.cmdModify.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdModify.Name = "cmdModify";
             this.cmdModify.Size = new System.Drawing.Size(75, 23);
@@ -237,8 +240,8 @@
             this.splitMain.Panel2.Controls.Add(this.lblEmpty);
             this.splitMain.Panel2.Controls.Add(this.viewData);
             this.splitMain.Panel2.Controls.Add(this.txtIntroduction);
-            this.splitMain.Size = new System.Drawing.Size(515, 341);
-            this.splitMain.SplitterDistance = 191;
+            this.splitMain.Size = new System.Drawing.Size(602, 434);
+            this.splitMain.SplitterDistance = 222;
             this.splitMain.SplitterWidth = 6;
             this.splitMain.TabIndex = 7;
             // 
@@ -258,6 +261,7 @@
             this.colOriginalValue,
             this.colUnsavedValue});
             this.viewData.Controls.Add(this.txtInput);
+            this.viewData.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.viewData.FullRowSelect = true;
             this.viewData.GridLines = true;
             this.viewData.HideSelection = false;
@@ -275,17 +279,17 @@
             // 
             // colName
             // 
-            this.colName.Text = "修改项目名称";
+            this.colName.Text = "名称";
             this.colName.Width = 130;
             // 
             // colOriginalValue
             // 
-            this.colOriginalValue.Text = "原值";
+            this.colOriginalValue.Text = "数值";
             this.colOriginalValue.Width = 80;
             // 
             // colUnsavedValue
             // 
-            this.colUnsavedValue.Text = "目标数值";
+            this.colUnsavedValue.Text = "修改";
             this.colUnsavedValue.Width = 80;
             // 
             // txtInput
@@ -295,25 +299,34 @@
             this.txtInput.MaximumSize = new System.Drawing.Size(32768, 16);
             this.txtInput.MaxLength = 10;
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(100, 21);
+            this.txtInput.Size = new System.Drawing.Size(100, 16);
             this.txtInput.TabIndex = 10;
             this.txtInput.Text = "数值在这里";
             this.txtInput.Visible = false;
             this.txtInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInput_KeyDown);
             this.txtInput.Leave += new System.EventHandler(this.txtInput_Leave);
             // 
-            // FrmMain
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "go-home.png");
+            this.imageList1.Images.SetKeyName(1, "go-next.png");
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(535, 446);
+            this.ClientSize = new System.Drawing.Size(622, 539);
             this.Controls.Add(this.splitMain);
             this.Controls.Add(this.cmdModify);
             this.Controls.Add(this.cmdGetAllObjects);
             this.Controls.Add(this.toolContainer);
-            this.Name = "FrmMain";
-            this.Text = "魔兽3内存修改器";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Warcraft III 内存修改器";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.toolContainer.ContentPanel.ResumeLayout(false);
             this.toolContainer.ContentPanel.PerformLayout();
@@ -361,6 +374,7 @@
         private System.Windows.Forms.ToolStripSeparator menuSplit1;
         private System.Windows.Forms.SplitContainer splitMain;
         private System.Windows.Forms.Label lblEmpty;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

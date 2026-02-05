@@ -297,9 +297,9 @@ namespace War3Trainer
 
         private void ReportVersionOk(int processId, string version)
         {
-            labGameScanState.Text = "检测到游戏（"
+            labGameScanState.Text = "游戏已运行("
                 + processId.ToString()
-                + "），游戏版本："
+                + ")，版本："
                 + version
                 + "（支持）";
         }
