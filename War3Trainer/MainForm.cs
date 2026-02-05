@@ -108,6 +108,8 @@ namespace War3Trainer
             viewFunctions.Nodes.Clear();
             foreach (ITrainerNode currentFunction in _mainTrainer.GetFunctionList())
             {
+                if (currentFunction.NodeType == TrainerNodeType.Introduction) { continue; }
+
                 TreeNode[] parentNodes = viewFunctions.Nodes.Find(currentFunction.ParentIndex.ToString(), true);
                 TreeNodeCollection parentTree;
                 if (parentNodes.Length < 1)
@@ -161,13 +163,13 @@ namespace War3Trainer
             {
                 // Fill address list
                 FillAddressList(node.NodeIndex);
-                
+
                 // Show address list
                 if (viewData.Items.Count > 0)
                     SetRightGrid(RightFunction.EditTable);
                 else
                     SetRightGrid(RightFunction.Empty);
-            }            
+            }
         }
 
         private void FillAddressList(int functionNodeId)
@@ -319,7 +321,7 @@ namespace War3Trainer
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
-        
+
         private void MenuFileExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -408,13 +410,9 @@ namespace War3Trainer
             this.splitMain.Panel2.SuspendLayout();
             this.viewData.SuspendLayout();
 
-            txtIntroduction.Visible = function == RightFunction.Introduction;
             viewData.Visible = function == RightFunction.EditTable;
-            lblEmpty.Visible = function == RightFunction.Empty;
 
-            txtIntroduction.Dock = DockStyle.Fill;
             viewData.Dock = DockStyle.Fill;
-            lblEmpty.Location = new Point(0, 0);
 
             this.viewData.ResumeLayout(false);
             this.splitMain.Panel2.ResumeLayout(false);

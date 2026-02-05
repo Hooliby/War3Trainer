@@ -45,9 +45,7 @@
             this.viewFunctions = new System.Windows.Forms.TreeView();
             this.cmdGetAllObjects = new System.Windows.Forms.Button();
             this.cmdModify = new System.Windows.Forms.Button();
-            this.txtIntroduction = new System.Windows.Forms.TextBox();
             this.splitMain = new System.Windows.Forms.SplitContainer();
-            this.lblEmpty = new System.Windows.Forms.Label();
             this.viewData = new War3Trainer.ListViewEx();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colOriginalValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -212,17 +210,6 @@
             this.cmdModify.UseVisualStyleBackColor = true;
             this.cmdModify.Click += new System.EventHandler(this.cmdModify_Click);
             // 
-            // txtIntroduction
-            // 
-            this.txtIntroduction.Location = new System.Drawing.Point(8, 14);
-            this.txtIntroduction.Multiline = true;
-            this.txtIntroduction.Name = "txtIntroduction";
-            this.txtIntroduction.ReadOnly = true;
-            this.txtIntroduction.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtIntroduction.Size = new System.Drawing.Size(139, 53);
-            this.txtIntroduction.TabIndex = 6;
-            this.txtIntroduction.Text = resources.GetString("txtIntroduction.Text");
-            // 
             // splitMain
             // 
             this.splitMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -237,22 +224,11 @@
             // 
             // splitMain.Panel2
             // 
-            this.splitMain.Panel2.Controls.Add(this.lblEmpty);
             this.splitMain.Panel2.Controls.Add(this.viewData);
-            this.splitMain.Panel2.Controls.Add(this.txtIntroduction);
             this.splitMain.Size = new System.Drawing.Size(602, 434);
             this.splitMain.SplitterDistance = 222;
             this.splitMain.SplitterWidth = 6;
             this.splitMain.TabIndex = 7;
-            // 
-            // lblEmpty
-            // 
-            this.lblEmpty.AutoSize = true;
-            this.lblEmpty.Location = new System.Drawing.Point(153, 14);
-            this.lblEmpty.Name = "lblEmpty";
-            this.lblEmpty.Size = new System.Drawing.Size(113, 36);
-            this.lblEmpty.TabIndex = 8;
-            this.lblEmpty.Text = "没有可修改的项目，\r\n请在左侧功能列表中\r\n选择一个修改项。";
             // 
             // viewData
             // 
@@ -265,10 +241,10 @@
             this.viewData.FullRowSelect = true;
             this.viewData.GridLines = true;
             this.viewData.HideSelection = false;
-            this.viewData.Location = new System.Drawing.Point(8, 73);
+            this.viewData.Location = new System.Drawing.Point(8, 3);
             this.viewData.MultiSelect = false;
             this.viewData.Name = "viewData";
-            this.viewData.Size = new System.Drawing.Size(302, 134);
+            this.viewData.Size = new System.Drawing.Size(363, 428);
             this.viewData.TabIndex = 9;
             this.viewData.UseCompatibleStateImageBehavior = false;
             this.viewData.View = System.Windows.Forms.View.Details;
@@ -340,7 +316,6 @@
             this.menuMain.PerformLayout();
             this.splitMain.Panel1.ResumeLayout(false);
             this.splitMain.Panel2.ResumeLayout(false);
-            this.splitMain.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).EndInit();
             this.splitMain.ResumeLayout(false);
             this.viewData.ResumeLayout(false);
@@ -368,12 +343,10 @@
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ColumnHeader colOriginalValue;
         private System.Windows.Forms.ColumnHeader colUnsavedValue;
-        private System.Windows.Forms.TextBox txtIntroduction;
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.ToolStripMenuItem menuDebug1;
         private System.Windows.Forms.ToolStripSeparator menuSplit1;
         private System.Windows.Forms.SplitContainer splitMain;
-        private System.Windows.Forms.Label lblEmpty;
         private System.Windows.Forms.ImageList imageList1;
     }
 }

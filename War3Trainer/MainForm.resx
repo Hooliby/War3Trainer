@@ -179,47 +179,6 @@
         AQMB/wGPBAAB8AEDAf8BnwQAAfgBAwH/Ab8EAAH8ASMC/wQAAf4BYwL/BAAE/wQACw==
 </value>
   </data>
-  <data name="txtIntroduction.Text" xml:space="preserve">
-    <value>魔兽争霸3 冰封王座 内存修改器 说明
-
-[修改器简介]
-修改器不是作弊器，只能在单机上使用；战网上无法胡闹；想在宿舍里联机打RPG地图的话需要在每台电脑上做相同的修改动作才不会掉线。
-
-[支持的游戏版本]
-* 1.20e（1.20.4.6074）
-* 1.21a（1.21.0.6263）
-* 1.21b（1.21.1.6300）
-* 1.22（1.22.0.6328）
-* 1.23（1.23.0.6352）
-* 1.24a（1.24.0.6372）
-* 1.24b（1.24.1.6374）
-* 1.24c（1.24.2.6378）
-* 1.24d（1.24.3.6384）
-* 1.24e（1.24.4.6387）
-* 1.25b（1.25.1.6397）
-* 1.26（1.26.0.6401）
-* 1.27a（1.27.0.52240）
-* 1.28（1.28.0.7205）
-* 1.28f（1.28.5.7680）
-
-[使用方法]
-1、确认当前Windows帐号拥有Administrators权限
-2、启动游戏和地图，是不是单人模式不重要
-3、在游戏中选中至少一个单位
-4、Alt-Tab切换到桌面，启动这个修改器
-5、单击“刷新”，在左侧列出的“选中单位列表”中选择一个单位
-6、右侧窗格中单击一个单元格，修改数字之后单击“修改”即可
-
-[关于名称的修改]
-1、物品名称修改时，本质上仍然是原来的单位
-2、物品转交到别人手上时，就会变成新的物品
-3、虽然我提供了单位的名称，但是改这个东西不会改变游戏中的单位
-
-[提交bug]
-想提供bug或者新功能的话，可以去我的blog或者我的github提交。
-blog：http://tctianchi.duapp.com
-github：https://github.com/tctianchi/War3Trainer</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>54</value>
   </metadata>
