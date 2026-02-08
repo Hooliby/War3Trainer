@@ -316,11 +316,10 @@ namespace War3Trainer
         /************************************************************************/
         private void MenuHelpAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("魔兽争霸3 冰封王座 内存修改器" + System.Environment.NewLine
+            MessageBox.Show("Warcraft III 内存修改器"
                 + Application.ProductVersion + System.Environment.NewLine
                 + System.Environment.NewLine
-                + "源代码在这里：https://github.com/tctianchi/War3Trainer" + System.Environment.NewLine
-                + "学着自己动手改。" + System.Environment.NewLine
+                + "暴徒修改：https://github.com/Hooliby/War3Trainer" + System.Environment.NewLine
                 + "",
                 "War3Trainer",
                 MessageBoxButtons.OK,
