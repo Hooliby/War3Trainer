@@ -636,11 +636,11 @@ namespace War3Trainer
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x94 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 基础1",
+                "攻击1 - 主属性",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xA0 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 基础2",
+                "攻击1 - 加成攻击",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xAC + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
