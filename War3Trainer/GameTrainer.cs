@@ -398,7 +398,7 @@ namespace War3Trainer
                     AddressListValueType.Integer,
                     10));
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "玩家" + i.ToString() + " - 木头",
+                    "玩家" + i.ToString() + " - 木材",
                     unchecked(upperAddress + playerSourceBaseAddress[i] + 0x80),
                     AddressListValueType.Integer,
                     10));
@@ -522,7 +522,7 @@ namespace War3Trainer
                     tmpValue1);
                 tmpAddress1 = unchecked(tmpAddress1 + 0x84);
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "HP - 目前",
+                    "HP - 当前",
                     unchecked(tmpAddress1 - 0xC),
                     AddressListValueType.Float));
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
@@ -540,7 +540,7 @@ namespace War3Trainer
                     tmpValue1);
                 tmpAddress1 = unchecked(tmpAddress1 + 0x84);
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                    "MP - 目前",
+                    "MP - 当前",
                     unchecked(tmpAddress1 - 0xC),
                     AddressListValueType.Float));
                 CreateAddress(new NewAddressListEventArgs(_nodeIndex,
@@ -628,100 +628,100 @@ namespace War3Trainer
                 AddressListValueType.Float));
             
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 倍乘",
+                "攻击① - 倍乘",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x88 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 骰子",
+                "攻击① - 骰子",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x94 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 主属性",
+                "攻击① - 基础攻击",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xA0 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 加成攻击",
+                "攻击① - 攻击加成",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xAC + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 丢失因子",
+                "攻击① - 丢失因子",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xBC + 0 * 16),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 攻击音效",
+                "攻击① - 攻击音效",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xE8 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 种类",
+                "攻击① - 种类",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xF4 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 最大目标数",
+                "攻击① - 最大目标数",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x100 + 0 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 间隔",
+                "攻击① - 间隔",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x158 + 0 * 8),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 首次延时",
+                "攻击① - 首次延时",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x16C + 0 * 16),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 范围",
+                "攻击① - 范围",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x258 + 0 * 8),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击1 - 范围缓冲",
+                "攻击① - 范围缓冲",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x26C + 0 * 8),
                 AddressListValueType.Float));
             
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 倍乘",
+                "攻击② - 倍乘",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x88 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 骰子",
+                "攻击② - 骰子",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x94 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 基础1",
+                "攻击② - 基础1",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xA0 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 基础2",
+                "攻击② - 基础2",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xAC + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 丢失因子",
+                "攻击② - 丢失因子",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xBC + 1 * 16),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 攻击音效",
+                "攻击② - 攻击音效",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xE8 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 种类",
+                "攻击② - 种类",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xF4 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 最大目标数",
+                "攻击② - 最大目标数",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x100 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 间隔",
+                "攻击② - 间隔",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x158 + 1 * 8),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 首次延时",
+                "攻击② - 首次延时",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x16C + 1 * 16),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 范围",
+                "攻击② - 范围",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x258 + 1 * 8),
                 AddressListValueType.Float));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击2 - 范围缓冲",
+                "攻击② - 范围缓冲",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x26C + 1 * 8),
                 AddressListValueType.Float));
         }
@@ -792,7 +792,7 @@ namespace War3Trainer
             }
         }
     }
-    /*
+   /*
     class UnitAbilityNode
         : TrainerNode, ITrainerNode
     {
@@ -801,17 +801,17 @@ namespace War3Trainer
 
         public int NodeIndex { get { return _nodeIndex; } }
         public int ParentIndex { get { return _parentIndex; } }
-        
+
         public NodeUnitAbility(int nodeIndex, clsGameContext gameContext, NewChildrenEventArgs args)
             : base(nodeIndex, gameContext, args)
         {
         }
-        
+
         public override void CreateChildren()
         {
         }
-    }
-    */
+    
+    }*/
     class AllItemsNode
         : TrainerNode, ITrainerNode
     {

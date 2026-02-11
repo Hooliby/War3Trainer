@@ -141,13 +141,15 @@ namespace War3Trainer
                 {
                     node.ImageIndex = 0;
                     node.SelectedImageIndex = 0;
-                    UpdateNodeIcons(node.Nodes);
                 }
                 else
                 {
                     node.ImageIndex = 1;
                     node.SelectedImageIndex = 1;
-
+                }
+                if (node.Nodes.Count > 0)
+                {
+                    UpdateNodeIcons(node.Nodes);
                 }
             }
         }
@@ -433,15 +435,14 @@ namespace War3Trainer
                     break;
             }
         }
-
         private void viewData_MouseUp(object sender, MouseEventArgs e)
         {
-            // Get item
+            //Get item
             if (viewData.SelectedItems.Count < 1)
                 return;
             ListViewItem currentItem = viewData.SelectedItems[0];
 
-            // Determine the content of edit box
+            //Determine the content of edit box
             ReplaceInputTextbox();
 
             txtInput.Tag = currentItem;
@@ -453,7 +454,7 @@ namespace War3Trainer
                 textToEdit = 2;
             txtInput.Text = currentItem.SubItems[textToEdit].Text;
 
-            // Enable editing
+            //Enable editing
             txtInput.Visible = true;
             txtInput.Focus();
             txtInput.Select(0, 0);  // Cancel select all
@@ -462,6 +463,7 @@ namespace War3Trainer
         private void viewData_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
             ReplaceInputTextbox();
+
         }
 
         private void viewData_Scrolling(object sender, EventArgs e)
@@ -579,6 +581,36 @@ namespace War3Trainer
             catch (WindowsApi.BadProcessIdException ex)
             {
                 ReportProcessIdFailure(ex.ProcessId);
+            }
+        }
+
+        private void 启用ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.TopMost = 启用ToolStripMenuItem.Checked;
+        }
+
+        private void 解除修改限制ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (解除修改限制ToolStripMenuItem == null || txtInput == null)
+                return;
+            txtInput.MaxLength = 解除修改限制ToolStripMenuItem.Checked ? 30 : 10;
+        }
+
+        private void viewFunctions_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F5)
+            {
+                cmdGetAllObjects_Click(sender, null);
+                e.Handled = true;
+            }
+        }
+
+        private void viewData_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F6)
+            {
+                cmdModify_Click(sender, null);
+                e.Handled = true;
             }
         }
     }
