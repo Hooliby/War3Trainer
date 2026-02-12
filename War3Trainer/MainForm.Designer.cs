@@ -52,6 +52,7 @@
             this.txtInput = new System.Windows.Forms.TextBox();
             this.cmdGetAllObjects = new System.Windows.Forms.Button();
             this.cmdModify = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.viewData = new War3Trainer.ListViewEx();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colOriginalValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -73,11 +74,11 @@
             // toolContainer.ContentPanel
             // 
             this.toolContainer.ContentPanel.Controls.Add(this.toolStripMain);
-            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(703, 26);
+            this.toolContainer.ContentPanel.Size = new System.Drawing.Size(700, 26);
             this.toolContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolContainer.Location = new System.Drawing.Point(0, 0);
             this.toolContainer.Name = "toolContainer";
-            this.toolContainer.Size = new System.Drawing.Size(703, 51);
+            this.toolContainer.Size = new System.Drawing.Size(700, 51);
             this.toolContainer.TabIndex = 0;
             this.toolContainer.Text = "toolStripContainer1";
             // 
@@ -94,7 +95,7 @@
             this.toolStripMain.Location = new System.Drawing.Point(0, 0);
             this.toolStripMain.Name = "toolStripMain";
             this.toolStripMain.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            this.toolStripMain.Size = new System.Drawing.Size(703, 28);
+            this.toolStripMain.Size = new System.Drawing.Size(700, 28);
             this.toolStripMain.TabIndex = 1;
             this.toolStripMain.Text = "toolStrip1";
             // 
@@ -128,7 +129,7 @@
             this.置顶ToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(703, 25);
+            this.menuMain.Size = new System.Drawing.Size(700, 25);
             this.menuMain.TabIndex = 2;
             this.menuMain.Text = "menuStrip1";
             // 
@@ -266,7 +267,7 @@
             // 
             this.cmdGetAllObjects.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdGetAllObjects.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmdGetAllObjects.Location = new System.Drawing.Point(269, 525);
+            this.cmdGetAllObjects.Location = new System.Drawing.Point(268, 525);
             this.cmdGetAllObjects.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdGetAllObjects.Name = "cmdGetAllObjects";
             this.cmdGetAllObjects.Size = new System.Drawing.Size(101, 33);
@@ -280,7 +281,7 @@
             this.cmdModify.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdModify.AutoSize = true;
             this.cmdModify.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmdModify.Location = new System.Drawing.Point(392, 525);
+            this.cmdModify.Location = new System.Drawing.Point(391, 525);
             this.cmdModify.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdModify.Name = "cmdModify";
             this.cmdModify.Size = new System.Drawing.Size(107, 33);
@@ -300,10 +301,10 @@
             this.viewData.FullRowSelect = true;
             this.viewData.GridLines = true;
             this.viewData.HideSelection = false;
-            this.viewData.Location = new System.Drawing.Point(2, 5);
+            this.viewData.Location = new System.Drawing.Point(6, 5);
             this.viewData.MultiSelect = false;
             this.viewData.Name = "viewData";
-            this.viewData.Size = new System.Drawing.Size(421, 450);
+            this.viewData.Size = new System.Drawing.Size(418, 450);
             this.viewData.SmallImageList = this.imageList1;
             this.viewData.TabIndex = 9;
             this.viewData.UseCompatibleStateImageBehavior = false;
@@ -334,7 +335,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(703, 564);
+            this.ClientSize = new System.Drawing.Size(700, 564);
             this.Controls.Add(this.cmdGetAllObjects);
             this.Controls.Add(this.cmdModify);
             this.Controls.Add(this.splitMain);
@@ -394,6 +395,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 解除修改限制ToolStripMenuItem;
         private System.Windows.Forms.TreeView viewFunctions;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

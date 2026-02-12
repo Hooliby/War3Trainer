@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -175,7 +176,6 @@ namespace War3Trainer
                 return;
 
             FillAddressList(node.NodeIndex);
-
         }
 
         private void FillAddressList(int functionNodeId)
@@ -593,7 +593,7 @@ namespace War3Trainer
         {
             if (解除修改限制ToolStripMenuItem == null || txtInput == null)
                 return;
-            txtInput.MaxLength = 解除修改限制ToolStripMenuItem.Checked ? 30 : 10;
+            txtInput.MaxLength = 解除修改限制ToolStripMenuItem.Checked ? 35 : 10;
         }
 
         private void viewFunctions_KeyDown(object sender, KeyEventArgs e)
