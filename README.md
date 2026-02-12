@@ -6,6 +6,6 @@
 + 添加快捷键刷新F5、修改F6
 + 窗口总在最前(适合游戏窗口化运行)
 ## 注意
-修改器只能单机起飞，不能多人运动
+**修改器只能单机起飞，不能多人运动**
 
 ![Screenshot](https://github.com/Hooliby/War3Trainer/blob/master/Screenshot.png)
