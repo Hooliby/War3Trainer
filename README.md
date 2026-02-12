@@ -5,5 +5,7 @@
 + 添加解除修改限制(平台部分地图属性会达到兆、京、垓、秭、穰、沟、极单位)
 + 添加快捷键刷新F5、修改F6
 + 窗口总在最前(适合游戏窗口化运行)
+## 注意
+修改器只适合单机起飞
 
 ![Screenshot](https://github.com/Hooliby/War3Trainer/blob/master/Screenshot.png)
