@@ -318,14 +318,24 @@ namespace War3Trainer
         /************************************************************************/
         private void MenuHelpAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Warcraft III 内存修改器"
-                + Application.ProductVersion + System.Environment.NewLine
-                + System.Environment.NewLine
-                + "暴徒修改：https://github.com/Hooliby/War3Trainer" + System.Environment.NewLine
-                + "",
-                "War3Trainer",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            DialogResult r = MessageBox.Show("Warcraft III 内存修改器"
+                 + Application.ProductVersion + System.Environment.NewLine
+                 + System.Environment.NewLine
+                 + "暴徒修改：https://github.com/Hooliby/War3Trainer" + System.Environment.NewLine
+                 + "",
+                 "War3Trainer",
+                 MessageBoxButtons.OKCancel,
+                 MessageBoxIcon.Information);
+
+            if (r == DialogResult.OK)
+            {
+                try
+                {
+                    Process.Start("https://github.com/Hooliby/War3Trainer");
+                 }
+                catch { }
+            }
+
         }
 
         private void MenuFileExit_Click(object sender, EventArgs e)
