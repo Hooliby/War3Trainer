@@ -40,12 +40,12 @@
             this.menuDebug1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSplit1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.置顶ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.启用ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.解除修改限制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.viewFunctions = new System.Windows.Forms.TreeView();
@@ -163,22 +163,6 @@
             this.menuFileExit.Text = "退出(&X)";
             this.menuFileExit.Click += new System.EventHandler(this.MenuFileExit_Click);
             // 
-            // menuHelp
-            // 
-            this.menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuHelpAbout});
-            this.menuHelp.Image = ((System.Drawing.Image)(resources.GetObject("menuHelp.Image")));
-            this.menuHelp.Name = "menuHelp";
-            this.menuHelp.Size = new System.Drawing.Size(77, 21);
-            this.menuHelp.Text = "帮助(&H)";
-            // 
-            // menuHelpAbout
-            // 
-            this.menuHelpAbout.Name = "menuHelpAbout";
-            this.menuHelpAbout.Size = new System.Drawing.Size(180, 22);
-            this.menuHelpAbout.Text = "关于修改器(&A)";
-            this.menuHelpAbout.Click += new System.EventHandler(this.MenuHelpAbout_Click);
-            // 
             // 置顶ToolStripMenuItem
             // 
             this.置顶ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -195,7 +179,7 @@
             this.启用ToolStripMenuItem.CheckOnClick = true;
             this.启用ToolStripMenuItem.Name = "启用ToolStripMenuItem";
             this.启用ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.启用ToolStripMenuItem.Text = "程序置顶";
+            this.启用ToolStripMenuItem.Text = "程序总在最前";
             this.启用ToolStripMenuItem.Click += new System.EventHandler(this.启用ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
@@ -208,8 +192,24 @@
             this.解除修改限制ToolStripMenuItem.CheckOnClick = true;
             this.解除修改限制ToolStripMenuItem.Name = "解除修改限制ToolStripMenuItem";
             this.解除修改限制ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.解除修改限制ToolStripMenuItem.Text = "解除修改限制";
+            this.解除修改限制ToolStripMenuItem.Text = "解除修改长度";
             this.解除修改限制ToolStripMenuItem.Click += new System.EventHandler(this.解除修改限制ToolStripMenuItem_Click);
+            // 
+            // menuHelp
+            // 
+            this.menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuHelpAbout});
+            this.menuHelp.Image = ((System.Drawing.Image)(resources.GetObject("menuHelp.Image")));
+            this.menuHelp.Name = "menuHelp";
+            this.menuHelp.Size = new System.Drawing.Size(77, 21);
+            this.menuHelp.Text = "帮助(&H)";
+            // 
+            // menuHelpAbout
+            // 
+            this.menuHelpAbout.Name = "menuHelpAbout";
+            this.menuHelpAbout.Size = new System.Drawing.Size(152, 22);
+            this.menuHelpAbout.Text = "关于修改器(&A)";
+            this.menuHelpAbout.Click += new System.EventHandler(this.MenuHelpAbout_Click);
             // 
             // imageList1
             // 
@@ -254,12 +254,12 @@
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(249, 31);
+            this.txtInput.Location = new System.Drawing.Point(263, 57);
             this.txtInput.Margin = new System.Windows.Forms.Padding(0);
             this.txtInput.MaximumSize = new System.Drawing.Size(32768, 16);
-            this.txtInput.MaxLength = 10;
+            this.txtInput.MaxLength = 7;
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(100, 16);
+            this.txtInput.Size = new System.Drawing.Size(100, 21);
             this.txtInput.TabIndex = 10;
             this.txtInput.Text = "数值在这里";
             this.txtInput.Visible = false;
@@ -270,7 +270,7 @@
             // 
             this.cmdGetAllObjects.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdGetAllObjects.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmdGetAllObjects.Location = new System.Drawing.Point(268, 525);
+            this.cmdGetAllObjects.Location = new System.Drawing.Point(8, 521);
             this.cmdGetAllObjects.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdGetAllObjects.Name = "cmdGetAllObjects";
             this.cmdGetAllObjects.Size = new System.Drawing.Size(101, 33);
@@ -284,7 +284,7 @@
             this.cmdModify.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdModify.AutoSize = true;
             this.cmdModify.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmdModify.Location = new System.Drawing.Point(391, 525);
+            this.cmdModify.Location = new System.Drawing.Point(115, 521);
             this.cmdModify.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
             this.cmdModify.Name = "cmdModify";
             this.cmdModify.Size = new System.Drawing.Size(107, 33);
@@ -304,7 +304,7 @@
             this.viewData.FullRowSelect = true;
             this.viewData.GridLines = true;
             this.viewData.HideSelection = false;
-            this.viewData.Location = new System.Drawing.Point(5, 5);
+            this.viewData.Location = new System.Drawing.Point(4, 5);
             this.viewData.MultiSelect = false;
             this.viewData.Name = "viewData";
             this.viewData.Size = new System.Drawing.Size(418, 450);
@@ -338,7 +338,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(700, 564);
+            this.ClientSize = new System.Drawing.Size(700, 557);
             this.Controls.Add(this.cmdGetAllObjects);
             this.Controls.Add(this.cmdModify);
             this.Controls.Add(this.splitMain);
