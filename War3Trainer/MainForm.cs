@@ -332,7 +332,7 @@ namespace War3Trainer
                 try
                 {
                     Process.Start("https://github.com/Hooliby/War3Trainer");
-                 }
+                }
                 catch { }
             }
 
@@ -431,8 +431,8 @@ namespace War3Trainer
 
             txtInput.Location = new Point(
                 viewData.Columns[0].Width + viewData.Columns[1].Width,
-                currentItem.Position.Y - 2);
-            txtInput.Width = viewData.Columns[2].Width;
+                currentItem.Position.Y +7);
+            txtInput.Width = viewData.Columns[2].Width +6;
         }
 
         private void viewData_KeyPress(object sender, KeyPressEventArgs e)
