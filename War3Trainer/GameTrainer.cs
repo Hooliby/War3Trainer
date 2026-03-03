@@ -685,11 +685,11 @@ namespace War3Trainer
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0x94 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击② - 基础1",
+                "攻击② - 基础攻击",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xA0 + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
-                "攻击② - 基础2",
+                "攻击② - 攻击加成",
                 unchecked(_newChildrenArgs.AttackAttributesAddress + 0xAC + 1 * 4),
                 AddressListValueType.Integer));
             CreateAddress(new NewAddressListEventArgs(_nodeIndex,
