@@ -83,15 +83,15 @@ namespace War3Trainer
             {
                 viewFunctions.Enabled = true;
                 viewData.Enabled = true;
-                cmdGetAllObjects.Enabled = true;
-                cmdModify.Enabled = true;
+                toolStripButton2.Enabled = true;
+                toolStripButton1.Enabled = true;
             }
             else
             {
                 viewFunctions.Enabled = false;
                 viewData.Enabled = false;
-                cmdGetAllObjects.Enabled = false;
-                cmdModify.Enabled = false;
+                toolStripButton2.Enabled = false;
+                toolStripButton1.Enabled = false;
             }
         }
 
@@ -343,45 +343,9 @@ namespace War3Trainer
             this.Close();
         }
 
-        private void cmdGetAllObjects_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                GetAllObject();
-            }
-            catch (WindowsApi.BadProcessIdException ex)
-            {
-                ReportProcessIdFailure(ex.ProcessId);
-            }
-        }
-
         private void cmdScanGame_Click(object sender, EventArgs e)
         {
             FindGame();
-        }
-
-        private void cmdModify_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ApplyModify();
-
-                // Refresh left
-                TreeNode selectedNode = viewFunctions.SelectedNode;
-                if (selectedNode == null)
-                    return;
-
-                ITrainerNode functionNode = selectedNode.Tag as ITrainerNode;
-                if (functionNode != null)
-                    RefreshSelectedObject(functionNode);
-
-                // Refresh right
-                SelectFunction(selectedNode);
-            }
-            catch (WindowsApi.BadProcessIdException ex)
-            {
-                ReportProcessIdFailure(ex.ProcessId);
-            }
         }
 
         private void viewFunctions_BeforeSelect(object sender, TreeViewCancelEventArgs e)
@@ -400,7 +364,7 @@ namespace War3Trainer
             // Save all if not saved
             if (!isSaved)
             {
-                cmdModify_Click(this, null);
+                toolStripButton1_Click(this, null);
             }
 
             // Select another function
@@ -431,8 +395,8 @@ namespace War3Trainer
 
             txtInput.Location = new Point(
                 viewData.Columns[0].Width + viewData.Columns[1].Width,
-                currentItem.Position.Y +7);
-            txtInput.Width = viewData.Columns[2].Width +6;
+                currentItem.Position.Y + 2);
+            txtInput.Width = viewData.Columns[2].Width + 2;
         }
 
         private void viewData_KeyPress(object sender, KeyPressEventArgs e)
@@ -603,24 +567,61 @@ namespace War3Trainer
         {
             if (解除修改限制ToolStripMenuItem == null || txtInput == null)
                 return;
-            txtInput.MaxLength = 解除修改限制ToolStripMenuItem.Checked ? 35 : 10;
+            txtInput.MaxLength = 解除修改限制ToolStripMenuItem.Checked ? 35 : 7;
         }
 
         private void viewFunctions_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.F5)
             {
-                cmdGetAllObjects_Click(sender, null);
+                toolStripButton2_Click(sender, null);
                 e.Handled = true;
             }
+
         }
 
         private void viewData_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.F6)
             {
-                cmdModify_Click(sender, null);
+                toolStripButton1_Click(sender, null);
                 e.Handled = true;
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ApplyModify();
+
+                // Refresh left
+                TreeNode selectedNode = viewFunctions.SelectedNode;
+                if (selectedNode == null)
+                    return;
+
+                ITrainerNode functionNode = selectedNode.Tag as ITrainerNode;
+                if (functionNode != null)
+                    RefreshSelectedObject(functionNode);
+
+                // Refresh right
+                SelectFunction(selectedNode);
+            }
+            catch (WindowsApi.BadProcessIdException ex)
+            {
+                ReportProcessIdFailure(ex.ProcessId);
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GetAllObject();
+            }
+            catch (WindowsApi.BadProcessIdException ex)
+            {
+                ReportProcessIdFailure(ex.ProcessId);
             }
         }
     }
