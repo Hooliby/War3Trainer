@@ -25,5 +25,4 @@
 
 ## 注意
 **修改器只能单机起飞，不能多人运动（若强上将会导致与其他玩家数据不同步出现异常）** 
-
-![Screenshot](https://github.com/Hooliby/War3Trainer/blob/master/Screenshot.png)
+<img src="https://raw.githubusercontent.com/Hooliby/War3Trainer/refs/heads/master/Screenshot.png" width="500" height="600" alt="Screenshot">
