@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace War3Trainer
@@ -412,27 +413,45 @@ namespace War3Trainer
         private void viewData_MouseUp(object sender, MouseEventArgs e)
         {
             //Get item
-            if (viewData.SelectedItems.Count < 1)
-                return;
+            if (viewData.SelectedItems.Count < 1) return;
             ListViewItem currentItem = viewData.SelectedItems[0];
 
             //Determine the content of edit box
             ReplaceInputTextbox();
-
             txtInput.Tag = currentItem;
 
-            int textToEdit;
-            if (String.IsNullOrEmpty(currentItem.SubItems[2].Text))
-                textToEdit = 1;
-            else
-                textToEdit = 2;
-            txtInput.Text = currentItem.SubItems[textToEdit].Text;
+            int textToEdit = string.IsNullOrEmpty(currentItem.SubItems[2].Text) ? 1 : 2;
+            string originalText = currentItem.SubItems[textToEdit].Text;
+            string itemName = currentItem.SubItems[0].Text;
+
+            txtInput.Text = CalculateInputValue(itemName, originalText);
+            //txtInput.Text = currentItem.SubItems[textToEdit].Text;
 
             //Enable editing
             txtInput.Visible = true;
             txtInput.Focus();
             txtInput.Select(0, 0);  // Cancel select all
         }
+
+        private string CalculateInputValue(string itemName, string originalText)
+        {
+            if (itemName == "攻击① - 间隔") return "0.01";
+            if (itemName.Contains("金币") || itemName.Contains("木材")) return "900000";
+            if (itemName.Contains("最大人口")) return "100";
+
+            int multiplier = xToolStripMenuItem1.Checked ? 2 :
+                xToolStripMenuItem2.Checked ? 3 :
+                toolStripMenuItem7.Checked ? 4 :
+                xToolStripMenuItem3.Checked ? 5 : 1;
+
+            if (multiplier > 1 && double.TryParse(originalText, out double val))
+            {
+                return ((int)Math.Round(val, MidpointRounding.AwayFromZero) * multiplier).ToString();
+            }
+
+            return originalText;
+        }
+
 
         private void viewData_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
@@ -622,6 +641,26 @@ namespace War3Trainer
             catch (WindowsApi.BadProcessIdException ex)
             {
                 ReportProcessIdFailure(ex.ProcessId);
+            }
+        }
+
+        private void GroupedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem currentItem = sender as ToolStripMenuItem;
+            if (currentItem == null) return;
+
+            ToolStripMenuItem[] allItems = new ToolStripMenuItem[]
+            {
+                xToolStripMenuItem,
+                xToolStripMenuItem1,
+                xToolStripMenuItem2,
+                toolStripMenuItem7,
+                xToolStripMenuItem3
+            };
+
+            foreach (var item in allItems)
+            {
+                item.Checked = (item == currentItem);
             }
         }
     }
