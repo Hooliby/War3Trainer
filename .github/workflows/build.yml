@@ -1,0 +1,50 @@
+name: Build War3Trainer
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restore NuGet packages
+      run: nuget restore War3Trainer.sln
+
+    - name: Build Solution
+      run: msbuild War3Trainer.sln /p:Configuration=Release /p:Platform="Any CPU"
+
+    - name: Create Release Folder
+      run: |
+        New-Item -ItemType Directory -Path "Release-Build" -Force
+        Copy-Item -Path "War3Trainer\bin\Release\War3Trainer.exe" -Destination "Release-Build\"
+        Copy-Item -Path "War3Trainer\bin\Release\*.dll" -Destination "Release-Build\" -ErrorAction SilentlyContinue
+
+    - name: Archive Release
+      uses: actions/upload-artifact@v4
+      with:
+        name: War3Trainer-Release
+        path: Release-Build/
+        
+    - name: Zip Release Folder
+      run: |
+        Compress-Archive -Path "Release-Build\*" -DestinationPath "War3Trainer-Release.zip"
+
+    - name: Upload Zip Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: War3Trainer-Zip
+        path: War3Trainer-Release.zip

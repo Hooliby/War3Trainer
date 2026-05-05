@@ -1,0 +1,9 @@
+/War3Trainer/bin
+/War3Trainer/obj
+/.vs
+*.user
+*.suo
+*.useroscache
+*.sln.docstates
+Release-Build/
+War3Trainer-Release.zip
